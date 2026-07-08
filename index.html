@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arborith · Moss Canopy | gardening intelligence</title>
+  <meta name="description" content="Deep gardening wisdom, botanical guides, and soil-first strategies. A premium authority blog for the cultivated mind." />
+  <style>
+    /* ----------------------------------------------
+       ARBORITH · MOSS CANOPY
+       Unique visual identity – organic, muted, earthy
+       Typography: serif + sans, generous spacing
+       ---------------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f0ea;
+      color: #2b2a26;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      padding: 0 1.5rem;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      background: #fcf9f5;
+      box-shadow: 0 20px 60px rgba(40, 30, 20, 0.06);
+      padding: 0 2rem 4rem;
+      border-radius: 0 0 48px 48px;
+    }
+
+    /* ----- typography & spacing ----- */
+    h1, h2, h3, h4 {
+      font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      color: #1e2c1c;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 6px solid #7f9f7a;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin: 2rem 0 0.8rem;
+      color: #3d5539;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+      max-width: 80ch;
+    }
+
+    a {
+      color: #3b6b3a;
+      text-decoration: none;
+      border-bottom: 1px solid #b8cfb0;
+      transition: border 0.15s;
+    }
+
+    a:hover {
+      border-bottom-color: #3b6b3a;
+    }
+
+    /* ----- header / nav ----- */
+    .site-header {
+      padding: 2.2rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #e3ddd2;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1d3a1a;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: #6f8f6a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-family: 'Avenir Next', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: #3f4e3a;
+    }
+
+    .nav-links a:hover {
+      color: #1d3a1a;
+      border-bottom: 2px solid #7f9f7a;
+    }
+
+    /* ----- hero (content-first) ----- */
+    .hero {
+      padding: 3.2rem 0 2.8rem;
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      font-weight: 450;
+      line-height: 1.15;
+      color: #1d2d1a;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #3f4c39;
+      margin: 1.2rem 0 1.8rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 3rem;
+      font-family: 'Avenir Next', sans-serif;
+      font-size: 0.95rem;
+      color: #5c6f54;
+      border-top: 1px solid #e3ddd2;
+      padding-top: 1.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .hero-meta strong {
+      color: #2a4027;
+      font-weight: 500;
+    }
+
+    /* ----- featured articles (cards) ----- */
+    .section-label {
+      font-family: 'Avenir Next', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: #7b8f72;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2.4rem;
+      margin: 1.8rem 0 2.5rem;
+    }
+
+    .card {
+      background: #f6f3ed;
+      border-radius: 28px;
+      padding: 1.8rem 2rem 2.2rem;
+      transition: background 0.2s, box-shadow 0.2s;
+      border: 1px solid #eae3d8;
+      box-shadow: 0 6px 14px rgba(60, 50, 30, 0.02);
+    }
+
+    .card:hover {
+      background: #f2eee7;
+      box-shadow: 0 10px 24px rgba(60, 50, 30, 0.05);
+    }
+
+    .card .tag {
+      font-family: 'Avenir Next', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6d8765;
+      border: 1px solid #c6d7bd;
+      display: inline-block;
+      padding: 0.1rem 0.8rem;
+      border-radius: 40px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      margin: 0.2rem 0 0.6rem;
+      line-height: 1.25;
+      color: #1d2d1a;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: #3a4834;
+    }
+
+    .card .read-more {
+      font-family: 'Avenir Next', sans-serif;
+      font-weight: 500;
+      color: #2d5a2a;
+      border-bottom: 2px solid #b8cfb0;
+      padding-bottom: 0.1rem;
+    }
+
+    /* ----- categories & resource grid (minimal) ----- */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 3.5rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .cat-item {
+      border-bottom: 1px dashed #d9d0c2;
+      padding: 0.7rem 0;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Avenir Next', sans-serif;
+    }
+
+    .cat-item a {
+      border-bottom: none;
+      font-weight: 450;
+    }
+
+    .cat-count {
+      color: #7b8f72;
+      font-size: 0.9rem;
+    }
+
+    /* ----- article preview (latest / tutorials) ----- */
+    .article-list {
+      list-style: none;
+      margin: 1.8rem 0;
+    }
+
+    .article-list li {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid #eae3d8;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.6rem 1.2rem;
+    }
+
+    .article-list .title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      font-family: 'Avenir Next', sans-serif;
+      color: #1d2d1a;
+      flex: 1;
+    }
+
+    .article-list .meta {
+      font-family: 'Avenir Next', sans-serif;
+      font-size: 0.8rem;
+      color: #6d8765;
+      letter-spacing: 0.02em;
+    }
+
+    /* ----- FAQ (schema-ready) ----- */
+    .faq-item {
+      border-bottom: 1px solid #e3ddd2;
+      padding: 1.6rem 0;
+    }
+
+    .faq-item h4 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #1d2d1a;
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-item p {
+      margin-bottom: 0.2rem;
+      color: #3f4c39;
+    }
+
+    /* ----- newsletter (simple) ----- */
+    .newsletter {
+      background: #e8ede3;
+      border-radius: 48px;
+      padding: 2.8rem 3rem;
+      margin: 3.5rem 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem 3rem;
+    }
+
+    .newsletter h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: #1d2d1a;
+    }
+
+    .newsletter p {
+      margin: 0;
+      max-width: 400px;
+    }
+
+    .newsletter input {
+      background: white;
+      border: 1px solid #c6d7bd;
+      padding: 0.8rem 1.6rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      font-family: 'Avenir Next', sans-serif;
+      flex: 1 1 220px;
+      outline: none;
+    }
+
+    .newsletter button {
+      background: #1d3a1a;
+      border: none;
+      color: white;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-family: 'Avenir Next', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .newsletter button:hover {
+      background: #2e552a;
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 2px solid #e3ddd2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #4b5f44;
+      font-family: 'Avenir Next', sans-serif;
+    }
+
+    .footer a {
+      border-bottom: none;
+      color: #3b6b3a;
+    }
+
+    /* ----- responsive & spacing ----- */
+    @media (max-width: 760px) {
+      body { padding: 0 0.8rem; }
+      .container { padding: 0 1.2rem 3rem; }
+      h1 { font-size: 2.6rem; }
+      .hero h1 { font-size: 2.6rem; }
+      .two-col-grid { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
+      .newsletter { flex-direction: column; align-items: stretch; text-align: center; }
+      .site-header { flex-direction: column; gap: 1.2rem; }
+      .nav-links { flex-wrap: wrap; gap: 1rem 1.8rem; }
+    }
+
+    /* ----- image placeholder (minimal) ----- */
+    .img-placeholder {
+      background: #dbd5c8;
+      border-radius: 24px;
+      width: 100%;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4d5f44;
+      font-family: 'Avenir Next', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      background-image: radial-gradient(circle at 10% 30%, #c9d4be 0%, #b6c4a8 80%);
+      margin: 1.2rem 0 1.8rem;
+      border: 1px solid #d0cbbc;
+    }
+
+    .img-hero {
+      height: 200px;
+      background-image: radial-gradient(circle at 30% 40%, #b7caad, #8ea485);
+      margin: 1.8rem 0 0.4rem;
+    }
+
+    .img-featured {
+      height: 140px;
+      background-image: linear-gradient(145deg, #bbceb0, #9cb292);
+      margin: 0.2rem 0 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- header -->
+    <header class="site-header">
+      <div class="logo">Arborith <span>·</span> Moss Canopy</div>
+      <div class="nav-links">
+         <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+      </div>
+    </header>
+
+    <!-- 1. HERO (content-first, minimal image) -->
+    <section class="hero">
+      <div class="img-placeholder img-hero">🌱 hero · the cultivated canopy</div>
+      <h1>Gardening as intelligence<br />soil, rhythm, resilience</h1>
+      <p>Arborith is a quiet authority — built for gardeners who read, observe, and adapt. We dig beneath the surface, from mycorrhizal networks to climate-resilient perennials. No fluff, no shortcuts: just deep botanical knowledge, tested over seasons.</p>
+      <div class="hero-meta">
+        <span><strong>Featured topics:</strong> regenerative soil · microclimates · heirloom genetics · no-till systems</span>
+        <span><strong>Est. 2018</strong> · 400+ articles</span>
+      </div>
+    </section>
+
+    <!-- 2. FEATURED ARTICLES (cards) -->
+    <div>
+      <div class="section-label">✦ featured intelligence</div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="tag">soil</div>
+          <h3>The fungal bridge: mycorrhizae & nutrient transfer</h3>
+          <p>How underground networks exchange carbon for phosphorus — and why disturbance matters. A deep look at rhizophagy and soil food web dynamics.</p>
+          <span class="read-more">read more →</span>
+        </div>
+        <div class="card">
+          <div class="tag">design</div>
+          <h3>Layer your beds: the 5-stratum planting system</h3>
+          <p>Canopy, sub-canopy, shrub, herb, and groundcover — stacking functions for yield, habitat, and microclimate stability. Case study from a 3-acre forest garden.</p>
+          <span class="read-more">read more →</span>
+        </div>
+        <div class="card">
+          <div class="tag">climate</div>
+          <h3>Heat resilience: selecting cultivars for shifting zones</h3>
+          <p>Drought‑adapted tomatoes, chill‑hour changes, and the new perennial frontier. A state‑of‑the‑art review with hardiness data.</p>
+          <span class="read-more">read more →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. BEGINNER GUIDES + EXPERT RESOURCES (two col) -->
+    <div class="two-col-grid">
+      <div>
+        <div class="section-label">🌱 beginner guides</div>
+        <ul class="article-list">
+          <li><a href="#"><span class="title">Start with soil: texture, tilth, and life</span></a><span class="meta">8 min</span></li>
+          <li><a href="#"><span class="title">Seed starting: timing, depth, and moisture</span></a><span class="meta">6 min</span></li>
+          <li><a href="#"><span class="title">Compost that works: hot vs cold methods</span></a><span class="meta">10 min</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">🧪 expert resources</div>
+        <ul class="article-list">
+          <li><a href="#"><span class="title">Biochar activation & inoculation protocols</span></a><span class="meta">12 min</span></li>
+          <li><a href="#"><span class="title">Grafting for disease resistance: rootstock guide</span></a><span class="meta">9 min</span></li>
+          <li><a href="#"><span class="title">Phenology tracking: your garden’s calendar</span></a><span class="meta">7 min</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. POPULAR CATEGORIES (minimal) -->
+    <div>
+      <div class="section-label">📂 categories</div>
+      <div class="two-col-grid" style="margin-top: 0.4rem;">
+        <div>
+          <div class="cat-item"><a href="#">Soil & fertility</a><span class="cat-count">64</span></div>
+          <div class="cat-item"><a href="#">Perennials & shrubs</a><span class="cat-count">48</span></div>
+          <div class="cat-item"><a href="#">Vegetable systems</a><span class="cat-count">57</span></div>
+        </div>
+        <div>
+          <div class="cat-item"><a href="#">Microclimates</a><span class="cat-count">33</span></div>
+          <div class="cat-item"><a href="#">Pest ecology</a><span class="cat-count">29</span></div>
+          <div class="cat-item"><a href="#">Propagation</a><span class="cat-count">41</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. TRENDING + LATEST ARTICLES (combined) -->
+    <div style="margin: 2.8rem 0 0.6rem;">
+      <div class="section-label">🔥 trending now</div>
+      <ul class="article-list">
+        <li><span class="title">No‑till transition: first‑year pitfalls and wins</span><span class="meta">trending</span></li>
+        <li><span class="title">Cover crop cocktails: 6 species for winter protection</span><span class="meta">trending</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-label">📰 latest articles</div>
+      <ul class="article-list">
+        <li><span class="title">Bark mulch vs wood chips: carbon dynamics</span><span class="meta">3d ago</span></li>
+        <li><span class="title">Building a cold frame from reclaimed windows</span><span class="meta">5d ago</span></li>
+        <li><span class="title">Soil testing: how to read your lab results</span><span class="meta">1w ago</span></li>
+      </ul>
+    </div>
+
+    <!-- 6. IN-DEPTH TUTORIAL (featured image) -->
+    <div style="margin: 2.8rem 0 1rem;">
+      <div class="section-label">🔬 in‑depth tutorial</div>
+      <div class="card" style="background: #edf0e6; padding: 2rem 2.4rem;">
+        <div class="img-placeholder img-featured">📷 featured · layered propagation</div>
+        <h3>Air layering made simple: a step‑by‑step visual guide</h3>
+        <p>From wounding to rooting medium – master this advanced technique for difficult‑to‑root species. Includes checklist and troubleshooting table.</p>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; font-family: 'Avenir Next', sans-serif; font-size: 0.9rem; margin: 1rem 0 0.4rem;">
+          <span>✔ tools: sharp knife, sphagnum, plastic wrap</span>
+          <span>✔ timing: early spring or late summer</span>
+        </div>
+        <span class="read-more">read full tutorial →</span>
+      </div>
+    </div>
+
+    <!-- 7. RESOURCE HUB (mini) -->
+    <div style="margin: 2.2rem 0;">
+      <div class="section-label">📚 resource hub</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 1.2rem 2.4rem; background: #f3efe8; padding: 1.8rem 2rem; border-radius: 32px;">
+        <span><a href="#">Hardiness zone map (interactive)</a></span>
+        <span><a href="#">Seed viability chart</a></span>
+        <span><a href="#">Compost calculator</a></span>
+        <span><a href="#">Glossary of botanical terms</a></span>
+      </div>
+    </div>
+
+    <!-- 8. FAQ (schema-ready) -->
+    <div style="margin: 2.8rem 0 0.8rem;">
+      <div class="section-label">❓ frequently asked questions</div>
+      <div class="faq-item">
+        <h4>How often should I test my soil?</h4>
+        <p>For most home gardens, once per year in early spring is sufficient. For intensive vegetable production, test after each crop cycle to track nutrient drawdown.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What’s the best mulch for moisture retention?</h4>
+        <p>Straw and leaf mold offer excellent moisture retention while adding organic matter. Avoid fresh wood chips near annuals – they can tie up nitrogen.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I use coffee grounds directly in the garden?</h4>
+        <p>Yes, but moderate: coffee grounds are slightly acidic and nitrogen-rich. Mix with browns (leaves, cardboard) to balance carbon‑nitrogen ratio.</p>
+      </div>
+    </div>
+
+    <!-- 9. NEWSLETTER -->
+    <div class="newsletter">
+      <div>
+        <h3>Canopy notes</h3>
+        <p>Weekly insights, seasonal checklists, and research digests. No spam – just deep gardening.</p>
+      </div>
+      <input type="email" placeholder="your email" value="gardener@example.com" />
+      <button>Subscribe</button>
+    </div>
+
+    <!-- 10. FOOTER -->
+    <footer class="footer">
+      <div>© 2026 Arborith · Moss Canopy</div>
+      <div>
+        <a href="#">about</a> · <a href="#">contact</a> · <a href="#">privacy</a> · <a href="#">rss</a>
+      </div>
+      <div>crafted with soil & silence</div>
+    </footer>
+  </div>
+</body>
+</html>

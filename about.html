@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Arborith Moss Canopy</title>
+  <meta name="description" content="Arborith's roots: our mission, the soil ethic, and the people behind the canopy." />
+  <style>
+    /* ----------------------------------------------
+       ARBORITH · MOSS CANOPY – ABOUT
+       same unique identity, expanded for storytelling
+       ---------------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f0ea;
+      color: #2b2a26;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      padding: 0 1.5rem;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      background: #fcf9f5;
+      box-shadow: 0 20px 60px rgba(40, 30, 20, 0.06);
+      padding: 0 2rem 4rem;
+      border-radius: 0 0 48px 48px;
+    }
+
+    /* ----- typography & spacing ----- */
+    h1, h2, h3, h4 {
+      font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      color: #1e2c1c;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 6px solid #7f9f7a;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin: 2rem 0 0.8rem;
+      color: #3d5539;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+      max-width: 80ch;
+    }
+
+    a {
+      color: #3b6b3a;
+      text-decoration: none;
+      border-bottom: 1px solid #b8cfb0;
+      transition: border 0.15s;
+    }
+
+    a:hover {
+      border-bottom-color: #3b6b3a;
+    }
+
+    /* ----- header / nav ----- */
+    .site-header {
+      padding: 2.2rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #e3ddd2;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1d3a1a;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: #6f8f6a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-family: 'Avenir Next', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: #3f4e3a;
+    }
+
+    .nav-links a:hover {
+      color: #1d3a1a;
+      border-bottom: 2px solid #7f9f7a;
+    }
+
+    /* ----- hero about ----- */
+    .about-hero {
+      padding: 2.8rem 0 1.8rem;
+      max-width: 900px;
+    }
+
+    .about-hero h1 {
+      font-size: 3.4rem;
+      font-weight: 450;
+      color: #1d2d1a;
+      border-left: 6px solid #7f9f7a;
+      padding-left: 1.2rem;
+    }
+
+    .about-hero .lead {
+      font-size: 1.3rem;
+      color: #3f4c39;
+      margin: 1.4rem 0 0.8rem;
+    }
+
+    .about-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 3rem;
+      font-family: 'Avenir Next', sans-serif;
+      font-size: 0.95rem;
+      color: #5c6f54;
+      border-top: 1px solid #e3ddd2;
+      padding-top: 1.8rem;
+      margin-top: 1.8rem;
+    }
+
+    .about-meta strong {
+      color: #2a4027;
+      font-weight: 500;
+    }
+
+    /* ----- team / values grid ----- */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .value-card {
+      background: #f6f3ed;
+      border-radius: 28px;
+      padding: 1.8rem 2rem 2rem;
+      border: 1px solid #eae3d8;
+      box-shadow: 0 6px 14px rgba(60, 50, 30, 0.02);
+    }
+
+    .value-card h3 {
+      font-size: 1.5rem;
+      margin: 0 0 0.4rem;
+      color: #1d2d1a;
+    }
+
+    .value-card p {
+      font-size: 0.98rem;
+      color: #3a4834;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ----- timeline / story (simple) ----- */
+    .story-block {
+      background: #edf0e6;
+      border-radius: 32px;
+      padding: 2rem 2.4rem;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .story-block h3 {
+      margin-top: 0.2rem;
+    }
+
+    .story-block .milestone {
+      display: flex;
+      gap: 1.2rem;
+      border-bottom: 1px solid #d5ddc8;
+      padding: 1rem 0;
+      font-family: 'Avenir Next', sans-serif;
+    }
+
+    .story-block .year {
+      font-weight: 600;
+      color: #1d3a1a;
+      min-width: 70px;
+    }
+
+    .story-block .desc {
+      color: #3a4d34;
+    }
+
+    /* ----- image placeholder (consistent) ----- */
+    .img-placeholder {
+      background: #dbd5c8;
+      border-radius: 24px;
+      width: 100%;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4d5f44;
+      font-family: 'Avenir Next', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      background-image: radial-gradient(circle at 10% 30%, #c9d4be 0%, #b6c4a8 80%);
+      margin: 1.2rem 0 1.8rem;
+      border: 1px solid #d0cbbc;
+    }
+
+    .img-hero-about {
+      height: 200px;
+      background-image: radial-gradient(circle at 30% 40%, #b7caad, #8ea485);
+      margin: 1.8rem 0 0.4rem;
+    }
+
+    .img-team {
+      height: 160px;
+      background-image: linear-gradient(145deg, #bbceb0, #9cb292);
+      margin: 0.4rem 0 1.2rem;
+    }
+
+    /* ----- footer (same) ----- */
+    .footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 2px solid #e3ddd2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #4b5f44;
+      font-family: 'Avenir Next', sans-serif;
+    }
+
+    .footer a {
+      border-bottom: none;
+      color: #3b6b3a;
+    }
+
+    /* ----- responsive ----- */
+    @media (max-width: 760px) {
+      body { padding: 0 0.8rem; }
+      .container { padding: 0 1.2rem 3rem; }
+      h1 { font-size: 2.6rem; }
+      .about-hero h1 { font-size: 2.6rem; }
+      .values-grid { grid-template-columns: 1fr; }
+      .site-header { flex-direction: column; gap: 1.2rem; }
+      .nav-links { flex-wrap: wrap; gap: 1rem 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- header -->
+    <header class="site-header">
+      <div class="logo">Arborith <span>·</span> Moss Canopy</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" style="border-bottom: 2px solid #7f9f7a;">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </header>
+
+    <!-- about hero -->
+    <section class="about-hero">
+      <div class="img-placeholder img-hero-about">🌱 about · the soil beneath</div>
+      <h1>Rooted in curiosity,<br />guided by ecology</h1>
+      <p class="lead">Arborith began as a notebook — soil tests, phenology notes, and sketches of guilds. Today, it’s a quiet sanctuary for gardeners who treat plants as partners, not products.</p>
+      <div class="about-meta">
+        <span><strong>Founded</strong> 2018 · Pacific Northwest</span>
+        <span><strong>Mission</strong> to deepen the dialogue between gardener and land</span>
+        <span><strong>Ethos</strong> regenerative, low-intervention, knowledge-first</span>
+      </div>
+    </section>
+
+    <!-- values: what we stand for -->
+    <h2>Moss canopy values</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>🌿 Soil as system</h3>
+        <p>We see soil not as dirt, but as a living community. Every recommendation starts with biology — fungi, bacteria, and the invisible web.</p>
+      </div>
+      <div class="value-card">
+        <h3>🧭 Climate humility</h3>
+        <p>Gardening in shifting zones demands adaptability. We champion resilient perennials, water-wise design, and observation over force.</p>
+      </div>
+      <div class="value-card">
+        <h3>📚 Open knowledge</h3>
+        <p>All our guides, data, and protocols are shared without paywalls. Gardening intelligence should be a commons, not a commodity.</p>
+      </div>
+      <div class="value-card">
+        <h3>🕊️ Slow craft</h3>
+        <p>From grafting to compost, we honor the pace of seasons. No shortcuts — only patient, deliberate practice rooted in evidence.</p>
+      </div>
+    </div>
+
+    <!-- story / timeline -->
+    <h2>Our story</h2>
+    <div class="story-block">
+      <div class="img-placeholder img-team">📷 the team · field notes, 2020</div>
+      <h3>From a single raised bed to a global community</h3>
+      <p>Arborith started in a rain-soaked garden in the Willamette Valley. What began as a personal log of soil temperatures and cover crop trials grew into a digital library — now visited by growers in 80+ countries.</p>
+      <div class="milestone">
+        <span class="year">2018</span>
+        <span class="desc">First article: “Mycorrhizae in disturbed soils” — 200 reads.</span>
+      </div>
+      <div class="milestone">
+        <span class="year">2020</span>
+        <span class="desc">Launched the “Canopy Notes” newsletter; reached 5k subscribers.</span>
+      </div>
+      <div class="milestone">
+        <span class="year">2022</span>
+        <span class="desc">Published the open-access “Regenerative Bed Prep” series, used by schools and extension programs.</span>
+      </div>
+      <div class="milestone">
+        <span class="year">2025</span>
+        <span class="desc">Arborith now hosts 400+ articles, 30+ video tutorials, and a collaborative phenology map.</span>
+      </div>
+    </div>
+
+    <!-- meet the contributors / team (minimal) -->
+    <h2>Voices behind the canopy</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 1.2rem 0 2.5rem;">
+      <div style="flex: 1 1 200px; background: #f6f3ed; border-radius: 28px; padding: 1.6rem 1.8rem; border: 1px solid #eae3d8;">
+        <h4 style="font-size: 1.3rem; margin: 0;">Elena Marchetti</h4>
+        <p style="font-family: 'Avenir Next', sans-serif; font-size: 0.85rem; color: #5c6f54;">editor · soil ecology</p>
+        <p style="font-size: 0.95rem;">Agroecologist with 15 years in temperate food forests. She leads our no-till and fungal network research.</p>
+      </div>
+      <div style="flex: 1 1 200px; background: #f6f3ed; border-radius: 28px; padding: 1.6rem 1.8rem; border: 1px solid #eae3d8;">
+        <h4 style="font-size: 1.3rem; margin: 0;">James Okonkwo</h4>
+        <p style="font-family: 'Avenir Next', sans-serif; font-size: 0.85rem; color: #5c6f54;">contributor · climate adaptation</p>
+        <p style="font-size: 0.95rem;">Plant breeder and phenology tracker. James focuses on heat-tolerant cultivars and shifting hardiness zones.</p>
+      </div>
+      <div style="flex: 1 1 200px; background: #f6f3ed; border-radius: 28px; padding: 1.6rem 1.8rem; border: 1px solid #eae3d8;">
+        <h4 style="font-size: 1.3rem; margin: 0;">Lin Wei</h4>
+        <p style="font-family: 'Avenir Next', sans-serif; font-size: 0.85rem; color: #5c6f54;">design · permaculture systems</p>
+        <p style="font-size: 0.95rem;">Lin brings a background in landscape architecture and water-harvesting design. She crafts our guild and layering guides.</p>
+      </div>
+    </div>
+
+    <!-- simple newsletter (same style) -->
+    <div class="newsletter" style="background: #e8ede3; border-radius: 48px; padding: 2.8rem 3rem; margin: 2.5rem 0 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 2rem 3rem;">
+      <div>
+        <h3 style="margin: 0; font-size: 2rem; color: #1d2d1a;">Canopy notes</h3>
+        <p style="margin: 0; max-width: 400px;">Weekly insights, seasonal checklists, and research digests. No spam – just deep gardening.</p>
+      </div>
+      <input type="email" placeholder="your email" value="gardener@example.com" style="background: white; border: 1px solid #c6d7bd; padding: 0.8rem 1.6rem; border-radius: 60px; font-size: 1rem; font-family: 'Avenir Next', sans-serif; flex: 1 1 220px; outline: none;" />
+      <button style="background: #1d3a1a; border: none; color: white; padding: 0.8rem 2.4rem; border-radius: 60px; font-family: 'Avenir Next', sans-serif; font-weight: 500; font-size: 1rem; cursor: pointer; transition: background 0.2s;">Subscribe</button>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div>© 2026 Arborith · Moss Canopy</div>
+      <div>
+        <a href="about.html">about</a> · <a href="contact.html">contact</a> · <a href="privacy.html">privacy</a> · <a href="#">rss</a>
+      </div>
+      <div>crafted with soil & silence</div>
+    </footer>
+  </div>
+</body>
+</html>
